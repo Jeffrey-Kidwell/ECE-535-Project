@@ -10,10 +10,10 @@ A lightweight VLM system can recognize common infant states (awake/asleep, cryin
 ---
 
 ## Design Goals
-- **Accurate core states:** classify at least 4 states—awake, asleep, crying, caregiver present.  
+- **Accurate core states:** 
 - **Low latency:** <1.5 s end-to-end on 720p @ 1–2 fps analysis.  
 - **Privacy-aware:** optional on-prem inference; no raw video leaves device when “local mode” is on.  
-- **Explainable output:** short NL summaries (“The baby is asleep; eyes closed, minimal motion for 2 min.”).  
+- **Explainable output:** short NL summaries 
 - **Robustness:** works day/night (IR), handles occlusion, and background noise.  
 - **Easy deploy:** one-command container + dashboard; fallback to Colab if no CUDA GPU.  
 
@@ -62,9 +62,9 @@ v
 
 **Software stack:**
 - Python 3.10+, PyTorch 2.x, torchvision  
-- VLM: LLaVA-1.5 or BLIP-2/Flan-T5 (open-weights options), Transformers + accelerate  
-- Optional audio: open-source VAD + simple cry classifier (logistic/GRU on MFCCs)  
-- OpenCV (capture), FFmpeg (RTSP), FastAPI, Uvicorn, WebSockets  
+- VLM: LLaVA-1.5 or BLIP-2/Flan-T5, Transformers + accelerate  
+- Optional audio: open-source VAD + simple cry classifier
+- OpenCV, FFmpeg, FastAPI, Uvicorn, WebSockets  
 - MQTT broker (Mosquitto) or SMTP for alerts  
 - Frontend: simple HTML/JS dashboard (charts + thumbnails)  
 - DevOps: Docker, docker-compose; Colab notebook; Weights & Biases or TensorBoard  
@@ -156,4 +156,5 @@ Everyone contributes to testing and the final demo.
 - **M3 (End W4):** Alerts with <1 false alert/hour.  
 - **Final (W6):** Demo + report + reproducible environment. 
  
+
 ---
